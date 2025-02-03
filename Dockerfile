@@ -15,4 +15,4 @@ RUN wget -O - "https://github.com/jgrg/$gs2/archive/refs/tags/$RELEASE.tar.gz" |
     && cp genomescope.R /usr/local/bin \
     && cd .. && rm -r "$rel_dir"
 
-ENTRYPOINT ["genomescope.R"]
+ENTRYPOINT ["genomescope.R", "--json_report"]
